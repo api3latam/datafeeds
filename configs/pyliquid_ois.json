@@ -1,0 +1,32 @@
+{
+    "oisFormat": "1.0.0",
+    "title": "PyLiquid Service",
+    "version": "1.0.0",
+    "apiSpecifications": {
+        "servers": [
+            {
+                "url": "http://127.0.0.1:8000/"
+            }
+        ],
+        "paths": {
+            "/internal/wallet" : {
+                "get": {   
+                }
+            }
+        },
+        "components": {
+            "securitySchemes": {}
+        },
+        "security": {}
+    },
+    "endpoints": [
+        {
+            "name": "internalWallet",
+            "operation": {
+                "method": "get",
+                "path": "/internal/wallet"
+            },
+            "fixedOperationParameters": [],
+        }
+    ]
+}

@@ -1,0 +1,84 @@
+{
+    "oisFormat": "1.0.0",
+    "title": "Bitfinex Prices",
+    "version": "1.0.0",
+    "apiSpecifications": {
+        "servers": [
+            {
+                "url": "https://api-pub.bitfinex.com/v2/"
+            }
+        ],
+        "paths": {
+            "/ticker/{Symbol}": {
+                "get": {
+                    "parameters": [
+                        {
+                            "in": "path",
+                            "name": "Symbol"
+                        }
+                    ]
+                }
+            },
+            "/tickers/": {
+                "get": {
+                    "parameters": [
+                        {
+                            "in": "query",
+                            "name": "symbols"
+                        }
+                    ]
+                }
+            }
+        },
+        "components": {
+            "securitySchemes": {}
+        },
+        "security": {}
+    },
+    "endpoints": [
+        {
+            "name": "ticker",
+            "operation": {
+                "method": "get",
+                "path": "/ticker/{Symbol}"
+            },
+            "fixedOperationParameters": [],
+            "parameters": [
+                {
+                    "name": "Symbol",
+                    "operationParameter": {
+                        "in": "path",
+                        "name": "Symbol"
+                    },
+                    "default": "tBTCUSD",
+                    "required": true,
+                    "example": "https://api-pub.bitfinex.com/v2/ticker/tBTCUSD",
+                    "summary": "The ticker is a high level overview of the state of the market.",
+                    "externaDocs": "https://docs.bitfinex.com/reference/rest-public-ticker"
+                }
+            ]
+        },
+        {
+            "name": "tickers",
+            "operation": {
+                "method": "get",
+                "path": "/ticker/{Symbol}"
+            },
+            "fixedOperationParameters": [],
+            "parameters": [
+                {
+                    "name": "symbols",
+                    "operationParameter": {
+                        "in": "query",
+                        "name": "symbols"
+                    },
+                    "default": "fUSD,tBTCUSD",
+                    "required": true,
+                    "example": "https://api-pub.bitfinex.com/v2/tickers?symbols=fUSD,tBTCUSD",
+                    "summary": "The tickers endpoint provides a high level overview of the state of the market.  The endpoint can retrieve multiple tickers with a single query.",
+                    "externaDocs": "https://api-pub.bitfinex.com/v2/tickers"
+                }
+            ]
+        }
+    ]
+}
