@@ -9,8 +9,15 @@
             }
         ],
         "paths": {
+            "/" : {
+                "get": {
+                    "parameters": []
+                }
+
+            },
             "/internal/wallet" : {
                 "get": {   
+                    "parameters": []
                 }
             }
         },
@@ -25,7 +32,10 @@
             "operation": {
                 "method": "get",
                 "path": "/"
-            }
+            },
+            "fixedOperationParameters": [],
+            "reservedParameters": [],
+            "parameters": []
         },
         {
             "name": "internalWallet",
@@ -33,7 +43,9 @@
                 "method": "get",
                 "path": "/internal/wallet"
             },
-            "fixedOperationParameters": []
+            "fixedOperationParameters": [],
+            "reservedParameters": [],
+            "parameters": []
         }
     ]
 }
