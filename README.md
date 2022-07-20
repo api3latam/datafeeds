@@ -1,2 +1,3 @@
-# datafeeds
-Baseline for data feeds integrations. Powered by Bitfinex APIs
+# Datafeeds
+Baseline for our OIS across our repositories.
+Including coding to demonstrate APIs consumption.
